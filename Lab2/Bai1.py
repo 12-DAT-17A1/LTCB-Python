@@ -1,14 +1,10 @@
-print("Nhập vào tháng kiểm tra có bao nhiêu ngày trong tháng đó:")
-month = int(input("Nhập tháng: "))
+# Lenh kiem tra so ngay trong mot thang.
+month = int(input("Nhap thang: "))
 if month == 2:
-    year = int(input("Nhập năm: "))
-    if (month % 4 == 0 and month % 100 != 0) or (month % 400 == 0):
-        print(f"Tháng {month} có 29 ngày")
-    else:
-        print(f"Tháng {month} có 28 ngày")
-elif month in (1, 3, 5, 7, 8, 10, 12):
-    print(f"Tháng {month} có 31 ngày")
-elif month in (2, 4, 6, 9, 11):
-    print(f"Tháng {month} có 30 ngày")
+    print(f"Tháng {month} có thể có 28 hoặc 29 ngày")
+elif (month==1)or(month ==3)or(month==5)or(month==7)or(month==8)or(month==10)or(month==12):
+    print(f"Thang {month} co 31 ngay")
+elif (month==2)or(month ==4)or(month==6)or(month==9)or(month==11):
+    print(f"Thang {month} co 30 ngay")
 else:
-    print(f"Không có tháng {month} trong năm")
+    print("Khong co thang nay trong nam")
