@@ -1,0 +1,8 @@
+s = int(input("Nhập số giây: "))
+m = int(input("Nhập số phút: "))
+h = int(input("Nhập số giờ: "))
+d = int(input("Nhập số ngày: "))
+print(f"{s} giây = {round(s/60)} phút = {round(s/3600)} giờ = {round(s/86400)} ngày")
+print(f"{m} phút ={60*m} giây = {round(m/60)} giờ = {round(m/1440)} ngày")
+print(f"{h} giờ = {60*h} phút = {3600*h} giây = {round(h/24)} ngày")
+print(f"{d} ngày = {d*24} giờ = {d*1440} phút = {d*86400} giây")
