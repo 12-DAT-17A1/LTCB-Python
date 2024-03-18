@@ -1,6 +1,6 @@
-t_giay = float(input("Nhập thời gian sử dụng bóng đèn (giây): "))
-P = 220 * 2.7
-W = P * t_giay
-kWh = W / 1000 / 3600
-tien_dien = kWh * 7000
-print("Tiền điện phải trả là:", tien_dien, "đồng")
+a_x = float(input("Nhập tọa độ x của vectơ a: "))
+a_y = float(input("Nhập tọa độ y của vectơ a: "))
+b_x = float(input("Nhập tọa độ x của vectơ b: "))
+b_y = float(input("Nhập tọa độ y của vectơ b: "))
+tich_vo_huong = a_x * b_x + a_y * b_y
+print("Tích vô hướng của 2 vectơ a và b là:", tich_vo_huong)
