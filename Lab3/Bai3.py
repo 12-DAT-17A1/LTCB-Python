@@ -13,5 +13,5 @@ if n > 1:
                 if k % h == 0:
                     kt = False
             if kt:
-                print(f"{k} là số nguyên tố.")
+                print(f"{k} là số nguyên tố gần {n}.")
                 break
