@@ -167,63 +167,63 @@
 #     print(key, ":")
 #     print(value[0], ":", dtb)
 #     print("*" * 10)
-DS = {
-    "04": ["Ha", 7],
-    "02": ["Binh", 8],
-    "03": ["Hoa", 9],
-    "05": ["Son", 6],
-    "08": ["Hung", 10],
-}
-GT = {
-    "04": ["Ha", 9],
-    "06": ["Ngoc", 8],
-    "09": ["Van", 7],
-    "05": ["Son", 6],
-    "08": ["Hung", 10],
-}
-TN = {
-    "04": ["Ha", 7],
-    "02": ["Binh", 8],
-    "01": ["An", 9],
-    "05": ["Son", 6],
-    "08": ["Hung", 10],
-}
-DTB = {}
-print("{:<4}{:<6}{:<4}".format("MSV", "TEN", "DTB"))
-for key in DS:
-    if key in GT and key in TN:
-        dtb = (DS[key][1] + GT[key][1] + TN[key][1]) / 3
-        print("{:<4}{:<6}{:<4}".format(key, DS[key][0], round(dtb, 2)))
-        DTB[key] = [key, round(dtb, 2)]
-print("Dữ liệu về điểm trung bình của các sinh viên:")
-print(DTB)
-chain = """ Glucose is the fundamental thing that burns energy in our bodies. We get
-glucose from the foods we eat and it is transmitted to all cells via blood. This way, glucose
-ensures the energy which the cell needs. The quantity of the glucose in our blood shows
-us some data about our body’s health. Measuring blood glucose level is the most common
-way to control people’s medical condition."""
-dl = {}
-chain = chain.split()
-for i in chain:
-    dl[i] = dl.get(i, 0) + 1
-quantity_chain = len(chain)
-print(f"Chuỗi trên có {quantity_chain} từ.")
-for key, value in dl.items():
-    print(key + ":" + str(value), end=", ")
-lst = []
-dl = {}
-while True:
-    msv = input("Nhập msv gồm (4 ký tự) là số: ")
-    if len(msv) == 4 and msv.isdigit():
-        name = input("Nhập họ và tên: ")
-        dhp1 = float(input("Nhập điểm hp1: "))
-        dhp2 = float(input("Nhập điểm hp2: "))
-        dl[msv] = [name, dhp1, dhp2]
-    elif msv == "":
-        break
-    else:
-        print("Bạn nhập sai định dạng msv r nhập lại đi.")
-    print("Nếu muốn thoát ấn Enter.")
-print("{:<8}{:^20}{:>5}{:>5}".format("Mã SV", "Họ tên", "Điểm HP 1", "Điểm HP2"))
-for key, value in dl.items():
-    print("{:<8}{:<20}{:>5}{:>5}".format(key, dl[key][0], dl[key][1], dl[key][2]))
+# DS = {
+#     "04": ["Ha", 7],
+#     "02": ["Binh", 8],
+#     "03": ["Hoa", 9],
+#     "05": ["Son", 6],
+#     "08": ["Hung", 10],
+# }
+# GT = {
+#     "04": ["Ha", 9],
+#     "06": ["Ngoc", 8],
+#     "09": ["Van", 7],
+#     "05": ["Son", 6],
+#     "08": ["Hung", 10],
+# }
+# TN = {
+#     "04": ["Ha", 7],
+#     "02": ["Binh", 8],
+#     "01": ["An", 9],
+#     "05": ["Son", 6],
+#     "08": ["Hung", 10],
+# }
+# DTB = {}
+# print("{:<4}{:<6}{:<4}".format("MSV", "TEN", "DTB"))
+# for key in DS:
+#     if key in GT and key in TN:
+#         dtb = (DS[key][1] + GT[key][1] + TN[key][1]) / 3
+#         print("{:<4}{:<6}{:<4}".format(key, DS[key][0], round(dtb, 2)))
+#         DTB[key] = [key, round(dtb, 2)]
+# print("Dữ liệu về điểm trung bình của các sinh viên:")
+# print(DTB)
+# chain = """ Glucose is the fundamental thing that burns energy in our bodies. We get
+# glucose from the foods we eat and it is transmitted to all cells via blood. This way, glucose
+# ensures the energy which the cell needs. The quantity of the glucose in our blood shows
+# us some data about our body’s health. Measuring blood glucose level is the most common
+# way to control people’s medical condition."""
+# dl = {}
+# chain = chain.split()
+# for i in chain:
+#     dl[i] = dl.get(i, 0) + 1
+# quantity_chain = len(chain)
+# print(f"Chuỗi trên có {quantity_chain} từ.")
+# for key, value in dl.items():
+#     print(key + ":" + str(value), end=", ")
+# lst = []
+# dl = {}
+# while True:
+#     msv = input("Nhập msv gồm (4 ký tự) là số: ")
+#     if len(msv) == 4 and msv.isdigit():
+#         name = input("Nhập họ và tên: ")
+#         dhp1 = float(input("Nhập điểm hp1: "))
+#         dhp2 = float(input("Nhập điểm hp2: "))
+#         dl[msv] = [name, dhp1, dhp2]
+#     elif msv == "":
+#         break
+#     else:
+#         print("Bạn nhập sai định dạng msv r nhập lại đi.")
+#     print("Nếu muốn thoát ấn Enter.")
+# print("{:<8}{:^20}{:>5}{:>5}".format("Mã SV", "Họ tên", "Điểm HP 1", "Điểm HP2"))
+# for key, value in dl.items():
+#     print("{:<8}{:<20}{:>5}{:>5}".format(key, dl[key][0], dl[key][1], dl[key][2]))
