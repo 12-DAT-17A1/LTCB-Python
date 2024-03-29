@@ -96,6 +96,8 @@ list_of_elements = ["a", "b", "a", "c", "b", "a", "b", "b"]
 count = Counter(list_of_elements)
 most_common = reduce(lambda x, y: x if count[x] > count[y] else y, count)
 print(most_common)  # Output: 'b'
+
+
 coefficients = [1, 2, 3]  # 1x^2 + 2x + 3
 x = 2
 polynomial_value = reduce(lambda acc, coeff: acc * x + coeff, coefficients[::-1])
