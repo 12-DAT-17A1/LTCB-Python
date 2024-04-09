@@ -1,0 +1,6 @@
+2317460004 Nguyen Van E 5
+2317460001 Nguyen Van B 7
+2317460000 Nguyen Van A 8
+2317460005 Nguyen Van G 8
+2317460002 Nguyen Van C 9
+2317460003 Nguyen Van D 10
