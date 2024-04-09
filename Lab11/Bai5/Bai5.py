@@ -13,3 +13,4 @@ list_chain = [list(map(str,i)) for i in list_sort]
 list_sort_file_ket_qua = [" ".join(i)+"\n" for i in list_chain]
 with open("./Ketqua.txt",mode="w") as file_ket_qua:
        file_ket_qua.writelines(list_sort_file_ket_qua)
+       
