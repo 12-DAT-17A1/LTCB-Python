@@ -2,27 +2,9 @@ def clearchain():
     chain = input("Nhập chuỗi:  ")
     chain_new = ""
     for chr in chain:
-        if chr.upper() in {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-        }:
+        if chr.upper() in {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"}:
             chain_new += chr.upper()
     return chain_new
-
 
 def nhanbietso():
     chain = input("Nhập chuỗi số: ")

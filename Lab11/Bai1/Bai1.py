@@ -7,4 +7,5 @@ for i in list_dayso:
        print(i,end=" ")
        if i%2!=0:
               total+=i
+print("\n")
 print(f"Tổng các số hạng lẻ trong dãy là: {total}")

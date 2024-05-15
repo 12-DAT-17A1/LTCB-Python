@@ -1,118 +1,118 @@
 import csv
 import os
 
-# # Dữ liệu cần ghi
-# data = [
-#     ["Tên", "Tuổi", "Thành Phố"],
-#     ["Alice", 24, "New York"],
-#     ["Bob", 30, "London"],
-#     ["Charlie", 35, "Paris"],
-# ]
+# Dữ liệu cần ghi
+data = [
+    ["Tên", "Tuổi", "Thành Phố"],
+    ["Alice", 24, "New York"],
+    ["Bob", 30, "London"],
+    ["Charlie", 35, "Paris"],
+]
 
-# # Tạo và ghi dữ liệu vào tập tin CSV
-# with open("people.csv", "w", newline="") as file:
-#     writer = csv.writer(file)
-#     writer.writerows(data)
-# import csv
+# Tạo và ghi dữ liệu vào tập tin CSV
+with open("people.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+import csv
 
-# # Dữ liệu mẫu
-# data = [
-#     ["Tên", "Tuổi", "Thành Phố"],
-#     ["Alice", "24", "New York"],
-#     ["Bob, the Builder", "30", "London"],
-#     ['"Charlie"', "35", "Paris"],
-# ]
+# Dữ liệu mẫu
+data = [
+    ["Tên", "Tuổi", "Thành Phố"],
+    ["Alice", "24", "New York"],
+    ["Bob, the Builder", "30", "London"],
+    ['"Charlie"', "35", "Paris"],
+]
 
-# with open("people_custom.csv", "w", newline="") as file:
-#     writer = csv.writer(file, delimiter=";", quotechar='"', quoting=csv.QUOTE_MINIMAL)
-#     writer.writerows(data)
-# import csv
+with open("people_custom.csv", "w", newline="") as file:
+    writer = csv.writer(file, delimiter=";", quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    writer.writerows(data)
+import csv
 
-# # Danh sách các dictionary chứa dữ liệu
-# data = [
-#     {"Tên": "Alice", "Tuổi": 24, "Thành Phố": "New York"},
-#     {"Tên": "Bob", "Tuổi": 30, "Thành Phố": "London"},
-#     {"Tên": "Charlie", "Tuổi": 35, "Thành Phố": "Paris"},
-# ]
+# Danh sách các dictionary chứa dữ liệu
+data = [
+    {"Tên": "Alice", "Tuổi": 24, "Thành Phố": "New York"},
+    {"Tên": "Bob", "Tuổi": 30, "Thành Phố": "London"},
+    {"Tên": "Charlie", "Tuổi": 35, "Thành Phố": "Paris"},
+]
 
-# # Tên cột
-# fields = ["Tên", "Tuổi", "Thành Phố"]
+# Tên cột
+fields = ["Tên", "Tuổi", "Thành Phố"]
 
-# with open("people_dict.csv", "w", newline="") as file:
-#     writer = csv.DictWriter(file, fieldnames=fields)
+with open("people_dict.csv", "w", newline="") as file:
+    writer = csv.DictWriter(file, fieldnames=fields)
 
-#     # Ghi hàng tiêu đề
-#     writer.writeheader()
+    # Ghi hàng tiêu đề
+    writer.writeheader()
 
-#     # Ghi từng hàng dữ liệu
-#     for row in data:
-#         writer.writerow(row)
+    # Ghi từng hàng dữ liệu
+    for row in data:
+        writer.writerow(row)
 
-# lst = ["hello", "world"]
+lst = ["hello", "world"]
 
-# with open("./filedemo.txt", "w") as file:
-#     print(file.writelines(lst))
-# file = open("filedemo.txt", "r+")
-# file.seek(10)  # Di chuyển đến byte thứ 10 từ đầu tập tin
-# print(file.tell())  # In ra 10, xác nhận vị trí hiện tại của con trỏ
-# file.seek(, 0)  # Di chuyển đến vị trí thứ ba từ cuối tập tin
-# print(file.tell())  # In ra vị trí mới, tùy thuộc vào kích thước tập tin
-# file.close()
-# with open("./heights.txt", "r") as file_read:
-#     list_heights = list(map(float, file_read.read().split(",")))
-# list_height = [i * 0.0254 for i in list_heights]
-# mean_height = sum(list_height) / len(list_height)
-# print(round(mean_height, 2))
+with open("./filedemo.txt", "w") as file:
+    print(file.writelines(lst))
+file = open("filedemo.txt", "r+")
+file.seek(10)  # Di chuyển đến byte thứ 10 từ đầu tập tin
+print(file.tell())  # In ra 10, xác nhận vị trí hiện tại của con trỏ
+file.seek(0)  # Di chuyển đến vị trí thứ ba từ cuối tập tin
+print(file.tell())  # In ra vị trí mới, tùy thuộc vào kích thước tập tin
+file.close()
+with open("./heights.txt", "r") as file_read:
+    list_heights = list(map(float, file_read.read().split(",")))
+list_height = [i * 0.0254 for i in list_heights]
+mean_height = sum(list_height) / len(list_height)
+print(round(mean_height, 2))
 
 
 # Định nghĩa tên các cột
-# fieldnames = ["Name", "Age", "Job"]
+fieldnames = ["Name", "Age", "Job"]
 
-# # Dữ liệu để ghi vào tập tin CSV
-# rows = [
-#     {"Name": "Alice", "Age": 24, "Job": "Engineer"},
-#     {"Name": "Bob", "Age": 22, "Job": "Designer"},
-#     {"Name": "Charlie", "Age": 28, "Job": "Doctor"},
-# ]
+# Dữ liệu để ghi vào tập tin CSV
+rows = [
+    {"Name": "Alice", "Age": 24, "Job": "Engineer"},
+    {"Name": "Bob", "Age": 22, "Job": "Designer"},
+    {"Name": "Charlie", "Age": 28, "Job": "Doctor"},
+]
 
-# # Mở tập tin CSV để ghi dữ liệu
-# with open("example_with_header.csv", "w", newline="") as csvfile:
-#     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+# Mở tập tin CSV để ghi dữ liệu
+with open("example_with_header.csv", "w", newline="") as csvfile:
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-#     # Ghi tên các cột làm header
-#     writer.writeheader()
+    # Ghi tên các cột làm header
+    writer.writeheader()
 
-#     # Ghi dữ liệu
-#     writer.writerows(rows)
-# with open("./file.csv", mode="w", newline="") as file:
-#     name_colums = ["msv", "name", "diem"]
-#     writer = csv.DictWriter(file, fieldnames=name_colums)
-#     writer.writeheader()
-#     csv.writer(file).writerows([[1, 2, 3, 4], [4, 5, 6, 7, 8]])
-# lst = [
-#     ["1", "2", "3", "4"],
-#     ["4", "5", "6", "7", "8"],
-#     ["1", "2", "3", "4"],
-#     ["4", "5", "6", "7", "8"],
-#     ["1", "2", "3", "4"],
-#     ["4", "5", "6", "7", "8"],
-# ]
-# with open("./csvfile.csv", mode="a", newline="") as file:
-#     csv.writer(file).writerows(lst)
-# with open("./filedemo.txt", mode="r", encoding="utf-8") as file:
-#     chain = file.read()
-#     chain_new = "Nguyễn Tiến Đạt"
-#     position = 10
-#     new_content = chain[:position] + chain_new + chain[position - 1 :]
-# with open("./filedemo.txt", mode="w") as filewrite:
-#     filewrite.write(new_content)
+    # Ghi dữ liệu
+    writer.writerows(rows)
+with open("./file.csv", mode="w", newline="") as file:
+    name_colums = ["msv", "name", "diem"]
+    writer = csv.DictWriter(file, fieldnames=name_colums)
+    writer.writeheader()
+    csv.writer(file).writerows([[1, 2, 3, 4], [4, 5, 6, 7, 8]])
+lst = [
+    ["1", "2", "3", "4"],
+    ["4", "5", "6", "7", "8"],
+    ["1", "2", "3", "4"],
+    ["4", "5", "6", "7", "8"],
+    ["1", "2", "3", "4"],
+    ["4", "5", "6", "7", "8"],
+]
+with open("./csvfile.csv", mode="a", newline="") as file:
+    csv.writer(file).writerows(lst)
+with open("./filedemo.txt", mode="r", encoding="utf-8") as file:
+    chain = file.read()
+    chain_new = "Nguyễn Tiến Đạt"
+    position = 10
+    new_content = chain[:position] + chain_new + chain[position - 1 :]
+with open("./filedemo.txt", mode="w") as filewrite:
+    filewrite.write(new_content)
 
 
-# with open("example_with_header.csv", mode="r", encoding="utf-8") as file:
-#     csv_reader = csv.reader(file)
-#     next(csv_reader)  # Bỏ qua tiêu đề nếu cần
-#     for row in csv_reader:
-#         print(row)
+with open("example_with_header.csv", mode="r", encoding="utf-8") as file:
+    csv_reader = csv.reader(file)
+    next(csv_reader)  # Bỏ qua tiêu đề nếu cần
+    for row in csv_reader:
+        print(row)
 
 data = [["Name", "Age"], ["Alice", 24], ["Bob", 22]]
 
